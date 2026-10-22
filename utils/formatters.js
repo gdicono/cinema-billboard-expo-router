@@ -21,4 +21,28 @@ export const getRatingStars = (rating) => {
   return '⭐'.repeat(stars);
 };
 
-export const formatDuration = (minutes) => {};
+export const formatDuration = (minutes) => {
+  const hours = Math.floor(minutes / 60);
+  const remainingMinutes = minutes % 60;
+
+  return `${hours}h ${remainingMinutes}m`;
+};
+
+/*
+  function ratingStars(rating) {
+    const stars = Math.round((rating || 0) / 2);
+    return '🌟'.repeat(stars);
+  }
+
+    function formatDuration(minutes) {
+    if (!minutes || minutes <= 0) return '0 min';
+    const hours = Math.floor(minutes / 60);
+    const remainingMinutes = minutes % 60;
+
+    if (hours === 0) return `${remainingMinutes} min`;
+    if (remainingMinutes === 0) return `${hours} h`;
+
+    return `${hours} h ${remainingMinutes} min`;
+  }
+
+*/

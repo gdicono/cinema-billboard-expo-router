@@ -15,7 +15,7 @@ export default AddMovieFloatingButton;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'blue',
+    backgroundColor: '#f4511e',
     borderRadius: 50,
     elevation: 5,
     alignItems: 'center',

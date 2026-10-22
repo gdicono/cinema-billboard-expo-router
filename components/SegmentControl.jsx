@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    backgroundColor: '#f0f0f0',
   },
   segment: {
     padding: 10,
@@ -31,6 +30,6 @@ const styles = StyleSheet.create({
   selectedSegment: {
     fontWeight: 'bold',
     borderBottomWidth: 2,
-    borderBottomColor: 'blue',
+    borderBottomColor: '#f4511e',
   },
 });

@@ -205,21 +205,21 @@ La aplicación tiene un modal para agregar películas, pero está incompleto. Ne
 
 Antes de entregar tu trabajo, asegúrate de que:
 
-- [ ] El servidor JSON está configurado correctamente y se ejecuta sin errores
-- [ ] Las calificaciones de películas se muestran como estrellas (⭐) no como números
-- [ ] Las duraciones de películas están formateadas como "Xh Ymin" no solo minutos
-- [ ] La aplicación obtiene datos de la API (sin importaciones locales de data.json)
-- [ ] Se muestra el estado de carga mientras se obtienen los datos
-- [ ] La vista "All Movies" muestra todas las películas en una lista vertical
-- [ ] La vista "Movies By Category" muestra categorías con listas horizontales de películas
-- [ ] Las categorías son obtenidas de la API
+- [x] El servidor JSON está configurado correctamente y se ejecuta sin errores
+- [x] Las calificaciones de películas se muestran como estrellas (⭐) no como números
+- [x] Las duraciones de películas están formateadas como "Xh Ymin" no solo minutos
+- [x] La aplicación obtiene datos de la API (sin importaciones locales de data.json)
+- [x] Se muestra el estado de carga mientras se obtienen los datos
+- [x] La vista "All Movies" muestra todas las películas en una lista vertical
+- [x] La vista "Movies By Category" muestra categorías con listas horizontales de películas
+- [x] Las categorías son obtenidas de la API
 - [ ] El modal de agregar película tiene todos los campos de entrada requeridos
-- [ ] El selector de categoría solo muestra categorías de la API
+- [x] El selector de categoría solo muestra categorías de la API
 - [ ] La validación del formulario funciona (alerta en campos faltantes)
 - [ ] Las películas pueden agregarse exitosamente a través de la API
 - [ ] La lista de películas se actualiza automáticamente después de agregar una nueva película
-- [ ] No hay errores o advertencias en la consola
-- [ ] La aplicación maneja errores apropiadamente (no se cae)
+- [x] No hay errores o advertencias en la consola
+- [x] La aplicación maneja errores apropiadamente (no se cae)
 
 ---
 

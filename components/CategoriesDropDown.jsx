@@ -19,12 +19,12 @@ const CategoriesDropDown = ({ categories, onSelectCategory, selectedCategory }) 
       {isOpen && (
         <View style={styles.dropdownList}>
           <FlatList
-            data={categories}
+            data={[{ id: 'all', name: 'All movies' }, ...categories]}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
               <TouchableOpacity
                 style={[styles.dropdownItem, selectedCategory === item.name && styles.selectedItem]}
-                onPress={() => handleSelectCategory(item.name)}
+                onPress={() => handleSelectCategory(item.id === 'all' ? '' : item.name)}
               >
                 <Text
                   style={[
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   container: {
     position: 'relative',
     zIndex: 1000,
+    width: '100%',
   },
   dropdownButton: {
     height: 50,
