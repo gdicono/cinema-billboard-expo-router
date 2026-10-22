@@ -213,11 +213,11 @@ Antes de entregar tu trabajo, asegúrate de que:
 - [x] La vista "All Movies" muestra todas las películas en una lista vertical
 - [x] La vista "Movies By Category" muestra categorías con listas horizontales de películas
 - [x] Las categorías son obtenidas de la API
-- [ ] El modal de agregar película tiene todos los campos de entrada requeridos
+- [x] El modal de agregar película tiene todos los campos de entrada requeridos
 - [x] El selector de categoría solo muestra categorías de la API
-- [ ] La validación del formulario funciona (alerta en campos faltantes)
-- [ ] Las películas pueden agregarse exitosamente a través de la API
-- [ ] La lista de películas se actualiza automáticamente después de agregar una nueva película
+- [x] La validación del formulario funciona (alerta en campos faltantes)
+- [x] Las películas pueden agregarse exitosamente a través de la API
+- [x] La lista de películas se actualiza automáticamente después de agregar una nueva película
 - [x] No hay errores o advertencias en la consola
 - [x] La aplicación maneja errores apropiadamente (no se cae)
 
