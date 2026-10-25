@@ -1,7 +1,5 @@
 import { View, Text, Image, StyleSheet } from 'react-native';
-import { getRatingStars } from '../utils/formatters';
-
-import { formatDuration } from '../utils/formatters';
+import { getRatingStars, formatDuration } from '../utils/formatters';
 
 export default function MovieCategoryCard({ title, poster, duration, rating }) {
   return (
