@@ -1,8 +1,10 @@
-import { View, FlatList, ActivityIndicator, Text, StyleSheet } from 'react-native';
+import { View, FlatList, ActivityIndicator, Text, StyleSheet, Pressable } from 'react-native';
 import useFetch from '../../hooks/useFetch';
 import Movie from '../../components/Movie';
+import { useRouter } from 'expo-router';
 
 export default function MoviesScreen() {
+  const router = useRouter();
   const {
     data: movies,
     loading,
@@ -27,22 +29,28 @@ export default function MoviesScreen() {
   }
 
   return (
-    <FlatList
-      data={movies}
-      keyExtractor={(item) => String(item.id)}
-      contentContainerStyle={styles.listContainer}
-      renderItem={({ item }) => (
-        <Movie
-          id={item.id}
-          title={item.title}
-          poster={item.poster}
-          category={item.category}
-          description={item.description}
-          duration={item.duration}
-          rating={item.rating}
-        />
-      )}
-    />
+    <View style={{ flex: 1 }}>
+      <FlatList
+        data={movies}
+        keyExtractor={(item) => String(item.id)}
+        contentContainerStyle={styles.listContainer}
+        renderItem={({ item }) => (
+          <Movie
+            id={item.id}
+            title={item.title}
+            poster={item.poster}
+            category={item.category}
+            description={item.description}
+            duration={item.duration}
+            rating={item.rating}
+          />
+        )}
+      />
+
+      <Pressable style={styles.addButton} onPress={() => router.push('/addMovie')}>
+        <Text style={styles.addButtonText}>Agregar</Text>
+      </Pressable>
+    </View>
   );
 }
 
@@ -64,5 +72,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 16,
     backgroundColor: '#F3F4F6',
+  },
+  addButton: {
+    position: 'absolute',
+    bottom: 20,
+    right: 20,
+    backgroundColor: '#f4511e',
+    padding: 15,
+    borderRadius: 50,
+    elevation: 5,
+  },
+  addButtonText: {
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    fontSize: 16,
   },
 });
