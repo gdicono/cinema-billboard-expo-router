@@ -13,10 +13,13 @@ export default function RootLayout() {
         },
       }}
     >
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+
       <Stack.Screen
-        name="index"
+        name="addMovie"
         options={{
-          title: 'Cinema Billboard',
+          presentation: 'modal',
+          title: 'Agregar Película',
         }}
       />
     </Stack>

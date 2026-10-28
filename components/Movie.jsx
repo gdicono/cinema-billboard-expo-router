@@ -1,10 +1,14 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View, Pressable } from 'react-native';
 
 import { getRatingStars, formatDuration } from '../utils/formatters';
 
-const Movie = ({ title, poster, category, description, duration, rating }) => {
+import { useRouter } from 'expo-router';
+
+const Movie = ({ id, title, poster, category, description, duration, rating }) => {
+  const router = useRouter();
+
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={() => router.push(`/movie/${id}`)}>
       <Image source={{ uri: poster }} style={styles.poster} resizeMode="cover" />
 
       <View style={styles.info}>
@@ -31,7 +35,7 @@ const Movie = ({ title, poster, category, description, duration, rating }) => {
           {description}
         </Text>
       </View>
-    </View>
+    </Pressable>
   );
 };
 

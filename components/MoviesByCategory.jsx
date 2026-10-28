@@ -1,8 +1,11 @@
-import { View, Text, StyleSheet, FlatList } from 'react-native';
-import Movie from './Movie';
+import { View, Text, StyleSheet, FlatList, Pressable } from 'react-native';
+
 import MovieCategoryCard from './MovieCategoryCard';
 
+import { useRouter } from 'expo-router';
+
 export default function MoviesByCategory({ movies, categories }) {
+  const router = useRouter();
   return (
     <FlatList
       data={categories}
@@ -21,12 +24,14 @@ export default function MoviesByCategory({ movies, categories }) {
               showsHorizontalScrollIndicator={false}
               keyExtractor={(item) => String(item.id)}
               renderItem={({ item: movie }) => (
-                <MovieCategoryCard
-                  title={movie.title}
-                  poster={movie.poster}
-                  duration={movie.duration}
-                  rating={movie.rating}
-                />
+                <Pressable onPress={() => router.push(`/movie/${movie.id}`)}>
+                  <MovieCategoryCard
+                    title={movie.title}
+                    poster={movie.poster}
+                    duration={movie.duration}
+                    rating={movie.rating}
+                  />
+                </Pressable>
               )}
             />
           </View>
